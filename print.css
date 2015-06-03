@@ -1,0 +1,15 @@
+@media print {
+    .gultfelt { 
+        position: absolute; 
+        top: 16cm; 
+    }
+    .helpText {
+        display: none;
+    }
+    #amount, #deadline, #paidBy, #paymentInfo {
+        display: none;
+    }
+    .output {
+        display: inline;
+    }
+}

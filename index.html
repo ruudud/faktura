@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="no">
+
+    <head>
+        <title>Faktura</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="faktura.css" />
+        <link rel="stylesheet" type="text/css" media="print" href="print.css" />
+    </head>
+    
+    <body>
+        
+        <div class="gultfelt">
+            <div class="kvitteringtopp">
+                <div class="kvitteringtoptekst">
+                    Kvittering
+                </div>
+                <div class="kvitteringfelter">
+                    <div class="innbetaltkonto">
+                        <div class="felttekst">
+                            Innbetalt til konto
+                        </div>
+                        <div class="feltboks">
+                            1503 42 91680
+                        </div>
+                    </div>
+                    <div class="belop">
+                        <div class="felttekst">
+                            Beløp
+                        </div>
+                        <div class="feltboks hvit">
+                            <input id="amount"/>
+                            <span class="amountOutput output"></span>
+                        </div>
+                    </div>
+                    <div class="betalerkonto">
+                        <div class="felttekst">
+                            Betalerens kontonummer
+                        </div>
+                        <div class="feltboks hvit">
+                            
+                        </div>
+                    </div>
+                    <div class="blankett">
+                        <div class="felttekst">
+                            Blankettnummer
+                        </div>
+                        <div class="feltboks hvit">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kvitteringmidt">
+                <div class="betalingsinfogiro">
+                    <div class="tekstgirofrist">
+                        <div class="betalingsinfotekst">
+                            Betalingsinformasjon
+                        </div>
+                        <div class="girotekst">
+                            GIRO
+                        </div>
+                        <div class="betalingsfristtekst">
+                            Betalings- frist
+                        </div>
+                        <div class="betalingsfristboks">
+                            <input id="deadline" type="date"/>
+                            <span class="deadlineOutput output"></span>
+                        </div>
+                    </div>
+                    <div class="infosignatur">
+                        <div class="betalingsinfo">
+                            <div class="betalingsinfoboks">
+                                <textarea cols="25" rows="3" id="paymentInfo"></textarea>
+                                <span class="paymentInfoOutput output"></span>
+                            </div>
+                        </div>
+                        <div class="signatur">
+                            <div class="signaturtekst">
+                                Underskrift ved girering
+                            </div>
+                            <div class="signaturboks">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="betalttilav"> 
+                    <div class="av">
+                        <div class="avtiltekst">
+                            Betalt av
+                        </div>
+                        <div class="avtilboks">
+                            <textarea cols="25" rows="3" id="paidBy"></textarea>
+                            <span class="paidByOutput output"></span>
+                        </div>
+                    </div>
+                    <div class="til">
+                        <div class="avtiltekst">
+                            Betalt til
+                        </div>
+                        <div class="avtilboks">
+                            Krisslee<br/>
+                            Neseveien 9<br/><br/>
+                            4514 MANDAL
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="kvitteringbunn">
+                <div class="belast">
+                    <div class="belasttekst">
+                        Belast konto
+                    </div>
+                    <div class="belastrute">
+                    </div>
+                    <div class="belastrute">
+                    </div>
+                    <div class="belastrute">
+                    </div>
+                    <div class="belastrute">
+                    </div>
+                    <div class="belastrute">
+                    </div>
+                    <div class="belastrute">
+                    </div>
+                    <div class="belastrute">
+                    </div>
+                    <div class="belastrute">
+                    </div>
+                    <div class="belastrute">
+                    </div>
+                    <div class="belastrute">
+                    </div>
+                    <div class="belastrute">
+                    </div>
+                    <div class="kvitteringtekst">
+                        Kvittering tilbake
+                    </div>
+                    <div class="kvitteringrute">
+                    </div>
+                </div>
+                <div class="kidsumkonto">
+                    <div class="kid">
+                        <div class="felttekst">
+                            Kundeidentifikasjon (KID)
+                        </div>
+                        <div class="feltboks">
+                            
+                        </div>
+                    </div>    
+                    <div class="kroner">
+                        <div class="felttekst">
+                            Kroner
+                        </div>
+                        <div class="feltboks">
+                            <span class="amountOutput output"></span>
+                        </div>
+                    </div>
+                    <div class="ore">
+                        <div class="felttekst">
+                            Øre
+                        </div>
+                        <div class="feltboks">
+                            &lt; &nbsp;&nbsp;&nbsp; &gt;
+                        </div>
+                    </div>
+                    <div class="konto">
+                        <div class="felttekst">
+                            Til konto
+                        </div>
+                        <div class="feltboks">
+                           1503 42 91680
+                        </div>
+                    </div>
+                    <div class="blankettnr">
+                        <div class="felttekst">
+                            Blankettnummer
+                        </div>
+                        <div class="feltboks">
+                            &lt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt;
+                        </div>
+                    </div>  
+                </div> 
+            </div> 
+        </div>
+        <div class="helpText">
+          <h3>Hint</h3>
+          <p>
+            Fyll ut ønskede felter markert i rødt, og trykk <strong>CTRL+P</strong>.<br>
+            I utskriftsdialogen bør du sette "Margins" til "Minimum" og krysse av for å inkludere bakgrunnsgrafikk.<br>
+            Du kan i denne dialogen også velge å skrive ut som PDF.
+          </p>
+          <p>
+            Denne siden er kun testet og vedlikeholdt for <a target="_blank" href="http://www.gogle.com/chrome">Google Chrome</a>.<br>
+          </p>
+        </div>
+    </body>
+<script src="input.js">
+</script>
+</html>
+
