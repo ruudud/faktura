@@ -286,8 +286,7 @@ dd {
 
 /* Input styling */
 #amount {
-  width: 120px;
-  padding-left: 1em;
+  width: 140px;
 }
 ::-webkit-inner-spin-button {
   display: none;
@@ -306,7 +305,7 @@ textarea:focus, input:focus {
 }
 
 .helpText {
-  padding: 1em;
+  padding: 0 1em;
   margin-top: 2em;
   border: 3px dashed red;
   width: 19cm;
