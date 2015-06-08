@@ -1,18 +1,32 @@
+body {
+  font-family: sans-serif;
+  -webkit-print-color-adjust:exact;
+}
 .hvit {
-  background: white;
+  background: white !important;
 }
 .litentekst {
   font-size: 6pt;
   font-weight: bold;
 }
-
+dt {
+  display: inline-block;
+  
+  width: 3.5cm;
+  float: left;
+  clear: left;
+}
+dd {
+  margin-left: 0;
+  float: left;
+}
 .gultfelt {
   width: 20cm;
   height: 10.6cm;
-  background: yellow;
+  background: yellow !important;
 }
 
-/* absolutt */
+
 .gultfelt .beloptop {
   top: 0.8cm;
 }
@@ -25,15 +39,12 @@
   height: 2cm;
 }
 .gultfelt .kvitteringtopp .kvitteringtoptekst {
-  margin-left: 1cm;
-  font-family: verdana;
+  margin-left: 0.8cm;
   padding-top: .1cm;
   font-size: 10pt;
   font-weight: bold;
 }
 .gultfelt .kvitteringtopp .felttekst {
-  margin-left: .2cm;
-  font-family: verdana;
   padding-top: .1cm;
   font-size: 6pt;
   font-weight: bold;
@@ -43,14 +54,15 @@
   padding-top: .1cm;
   margin-top: .1cm;
   text-align: center;
+  font-size: 13px;
 }
 .gultfelt .kvitteringtopp .innbetaltkonto {
-  margin-left: 1cm;
+  margin-left: 0.8cm;
   float: left;
   width: 3cm;
 }
 .gultfelt .kvitteringtopp .belop {
-  margin-left: 3.8cm;
+  margin-left: 3.4cm;
   float: left;
   width: 3.8cm;
 }
@@ -67,7 +79,7 @@
 
 .gultfelt .kvitteringmidt {
   height: 6cm;
-  background: white;
+  background: white !important;
 }
 .gultfelt .kvitteringmidt .betalingsinfogiro {
   height: 3cm;
@@ -82,7 +94,6 @@
   width: 3cm;
   margin-left: .2cm;
   height: .4cm;
-  font-family: verdana;
   padding-top: 0.1cm;
   font-size: 6pt;
   font-weight: bold;
@@ -91,7 +102,6 @@
   float: left;
   width: 1.2cm;
   margin-left: 7.5cm;
-  font-family: verdana;
   padding-top: .1cm;
   font-size: 10pt;
   font-weight: bold;
@@ -100,7 +110,6 @@
   float: left;
   width: 1.3cm;
   margin-left: 3.5cm;
-  font-family: verdana;
   padding-top: .1cm;
   font-size: 6pt;
   font-weight: bold;
@@ -115,7 +124,6 @@
   float: left;
   width: 8.5cm;
   margin-left: 2cm;
-  font-family: verdana;
   padding-top: .1cm;
   font-size: 6pt;
   font-weight: bold;
@@ -137,7 +145,6 @@
   margin-top: 0.4cm;
 }
 .gultfelt .kvitteringmidt .betalingsinfogiro .signaturtekst {
-  font-family: verdana;
   margin-left: .2cm;
   padding-top: .1cm;
   font-size: 6pt;
@@ -167,7 +174,6 @@
 .gultfelt .kvitteringmidt .betalttilav .avtiltekst {
   margin-left: .2cm;
   height: .4cm;
-  font-family: verdana;
   padding-top: .1cm;
   font-size: 6pt;
   font-weight: bold;
@@ -195,7 +201,6 @@
 .gultfelt .kvitteringbunn .belast .belasttekst {
   float: left;
   width: 1cm;
-  font-family: verdana;
   padding-top: .1cm;
   font-size: 6pt;
   font-weight: bold;
@@ -204,7 +209,6 @@
   margin-left: 6.8cm;
   float: left;
   width: 1.4cm;
-  font-family: verdana;
   padding-top: .1cm;
   font-size: 6pt;
   font-weight: bold;
@@ -214,18 +218,17 @@
   width: .5cm;
   margin: .1cm .1cm 0 0;
   float: left;
-  background: white;
+  background: white !important;
 }
 
 .gultfelt .kvitteringbunn .kidsumkonto {
   padding-left: .2cm;
   padding-top: 0.3cm;
   height: 1.4cm;
-  background: white;
+  background: white !important;
 }
 .gultfelt .kvitteringbunn .felttekst {
   margin-left: .2cm;
-  font-family: verdana;
   padding-top: .1cm;
   font-size: 6pt;
   font-weight: bold;
@@ -235,6 +238,7 @@
   margin-top: .1cm;
   padding-left: 0.2cm;
   padding-bottom: 0.3cm;
+  font-size: 13px;
 }
 
 .gultfelt .kvitteringbunn .kid {
@@ -270,6 +274,14 @@
   width: 3.5cm;
 }
 
+.firmainfo {
+  width: 10cm;
+  float: left;
+}
+.infotittel {
+  text-transform: uppercase;
+}
+
 /* Input styling */
 #amount {
   width: 120px;
@@ -297,6 +309,10 @@ textarea:focus, input:focus {
   border: 3px dashed red;
   width: 19cm;
 }
-.output {
+.printonly {
+  display: none;
+}
+
+.innhold {
   display: none;
 }

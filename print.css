@@ -1,15 +1,25 @@
 @media print {
-    .gultfelt { 
-        position: absolute; 
-        top: 16cm; 
-    }
-    .helpText {
-        display: none;
-    }
-    #amount, #deadline, #paidBy, #paymentInfo {
-        display: none;
-    }
-    .output {
-        display: inline;
-    }
+  .gultfelt {
+    position: absolute;
+    top: 16cm;
+  }
+  .helpText {
+    display: none;
+  }
+  .printhidden {
+    display: none;
+  }
+  .printonly {
+    display: inline;
+  }
+  .innhold {
+    display: block;
+    height: 10cm;
+  
+    padding: 0 0.8cm;
+  }
+  .fakturainfo {
+    width: 8cm;
+    float: left;
+  }
 }

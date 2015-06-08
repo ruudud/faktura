@@ -9,7 +9,35 @@
     </head>
     
     <body>
+        <div class="innhold">
+          <div class="firmainfo">
+            <h3>Krisslee</h3>
+            <p>
+              Neseveien 9<br>
+              4514 MANDAL
+            </p>
+            <p>
+              www.krisslee.no
+            </p>
+          </div>
+          <div class="fakturainfo">
+             <h5 class="infotittel">Faktura</h5>
+             <dl>
+              <dt>Org.nr.</dt>
+              <dd>913010779</dd>
+
+              <dt>Fakturadato</dt>
+              <dd class="invoiceDate"></dd>
+
+              <dt>Forfallsdato</dt>
+              <dd class="deadlineOutput"></dd>
+
+              <dt>Kontonr.</dt>
+              <dd class="accountnumberOutput">1503.42.91680</dd>
+            </p>
+          </div>
         
+        </div>
         <div class="gultfelt">
             <div class="kvitteringtopp">
                 <div class="kvitteringtoptekst">
@@ -18,10 +46,10 @@
                 <div class="kvitteringfelter">
                     <div class="innbetaltkonto">
                         <div class="felttekst">
-                            Innbetalt til konto
+                          Innbetalt til konto
                         </div>
-                        <div class="feltboks">
-                            1503 42 91680
+                        <div class="feltboks accountnumberOutput">
+                          1503.42.91680
                         </div>
                     </div>
                     <div class="belop">
@@ -29,8 +57,8 @@
                             Beløp
                         </div>
                         <div class="feltboks hvit">
-                            <input id="amount"/>
-                            <span class="amountOutput output"></span>
+                            <input id="amount" class="printhidden" />
+                            <span class="amountOutput printonly"></span>
                         </div>
                     </div>
                     <div class="betalerkonto">
@@ -64,15 +92,15 @@
                             Betalings- frist
                         </div>
                         <div class="betalingsfristboks">
-                            <input id="deadline" type="date"/>
-                            <span class="deadlineOutput output"></span>
+                            <input id="deadline" class="printhidden" type="date"/>
+                            <span class="deadlineOutput printonly"></span>
                         </div>
                     </div>
                     <div class="infosignatur">
                         <div class="betalingsinfo">
                             <div class="betalingsinfoboks">
-                                <textarea cols="25" rows="3" id="paymentInfo"></textarea>
-                                <span class="paymentInfoOutput output"></span>
+                                <textarea cols="25" rows="3" id="paymentInfo" class="printhidden"></textarea>
+                                <span class="paymentInfoOutput printonly"></span>
                             </div>
                         </div>
                         <div class="signatur">
@@ -90,8 +118,8 @@
                             Betalt av
                         </div>
                         <div class="avtilboks">
-                            <textarea cols="25" rows="3" id="paidBy"></textarea>
-                            <span class="paidByOutput output"></span>
+                            <textarea cols="25" rows="3" id="paidBy" class="printhidden"></textarea>
+                            <span class="paidByOutput printonly"></span>
                         </div>
                     </div>
                     <div class="til">
@@ -153,7 +181,7 @@
                             Kroner
                         </div>
                         <div class="feltboks">
-                            <span class="amountOutput output"></span>
+                            <span class="amountOutput printonly"></span>
                         </div>
                     </div>
                     <div class="ore">
@@ -169,7 +197,7 @@
                             Til konto
                         </div>
                         <div class="feltboks">
-                           1503 42 91680
+                           1503.42.91680
                         </div>
                     </div>
                     <div class="blankettnr">
@@ -183,7 +211,7 @@
                 </div> 
             </div> 
         </div>
-        <div class="helpText">
+        <div class="helpText printhidden">
           <h3>Hint</h3>
           <p>
             Fyll ut ønskede felter markert i rødt, og trykk <strong>CTRL+P</strong>.<br>
