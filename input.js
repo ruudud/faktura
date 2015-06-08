@@ -6,34 +6,6 @@
       + dateVal.getFullYear();
   }
 
-  function addListeners() {
-    document
-    .getElementById('amount')
-    .addEventListener('blur', onChange, false);
-    document
-    .getElementById('deadline')
-    .addEventListener('blur', onChange, false);
-    document
-    .getElementById('paidBy')
-    .addEventListener('blur', onChange, false);
-    document
-    .getElementById('paymentInfo')
-    .addEventListener('blur', onChange, false);
-  }
-  function addInvoiceDate() {
-    var sel = 'invoiceDate';
-    var $outs = document.getElementsByClassName(sel);
-    [].forEach.call($outs, function($out) {
-      $out.textContent = formatDate(Date.now());
-    });
-  }
-  function bootstrap() {
-    addListeners();
-    addInvoiceDate();
-  }
-
-
-  
   function onChange(ev) {
     var $el = ev.target,
       newVal;
@@ -50,7 +22,40 @@
       $out.innerHTML = newVal;
     });
   }
-  
+
+  function addListeners() {
+    document
+      .getElementById('amount')
+      .addEventListener('blur', onChange, false);
+    document
+      .getElementById('deadline')
+      .addEventListener('blur', onChange, false);
+    document
+      .getElementById('paidBy')
+      .addEventListener('blur', onChange, false);
+    document
+      .getElementById('paymentInfo')
+      .addEventListener('blur', onChange, false);
+    document
+      .getElementById('accountnumber')
+      .addEventListener('blur', onChange, false);
+    // TODO improve this..
+    document
+      .getElementById('accountnumber')
+      .dispatchEvent(new FocusEvent('blur'));
+  }
+  function addInvoiceDate() {
+    var sel = 'invoiceDate';
+    var $outs = document.getElementsByClassName(sel);
+    [].forEach.call($outs, function($out) {
+      $out.textContent = formatDate(Date.now());
+    });
+  }
+  function bootstrap() {
+    addListeners();
+    addInvoiceDate();
+  }
+
   window.addEventListener('load', bootstrap);
 })()
 

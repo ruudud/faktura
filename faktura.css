@@ -245,12 +245,14 @@ dd {
   float: left;
   width: 7cm;
   border-left: solid 1pt black;
+  min-height: 1.3cm;
 }
 .gultfelt .kvitteringbunn .kroner {
   padding-right: .2cm;
   float: left;
   width: 2.3cm;
   border-left: solid 1pt black;
+  min-height: 1.3cm;
 }
 .gultfelt .kvitteringbunn .kroner .feltboks {
   text-align: right;
