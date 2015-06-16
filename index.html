@@ -9,34 +9,39 @@
     </head>
     
     <body>
-        <h1 class="printhidden">Fakturagenerator</h1>
-        <div class="hvittfelt">
-          <div class="firmainfo">
-            <p class="paidToOutput"></p>
-            <p class="webpageOutput"></p>
-          </div>
-          <div class="fakturainfo">
-             <h5 class="infotittel">Faktura</h5>
-             <dl>
-              <dt>Org.nr.</dt>
-              <dd class="orgNumberOutput"></dd>
-
-              <dt>Fakturadato</dt>
-              <dd class="invoiceDateOutput"></dd>
-
-              <dt>Forfallsdato</dt>
-              <dd class="deadlineOutput"></dd>
-
-              <dt>Kontonr.</dt>
-              <dd class="accountNumberOutput"></dd>
-            </p>
-          </div>
+        <div class="malverk printhidden">
+          Bruk mal:
+          <ul id="templates"></ul>
+          ...eller fyll ut felter selv:
         </div>
 
         <div class="innhold printhidden">
           <input id="orgNumber" class="printhidden" placeholder="Org.nr." />
           <input id="webpage" class="printhidden" placeholder="Nettsted" />
           <small>(Valgfrie)</small>
+        </div>
+
+        <div class="hvittfelt">
+          <div class="firmainfo">
+            <p class="js-paidToOutput"></p>
+            <p class="js-webpageOutput"></p>
+          </div>
+          <div class="fakturainfo">
+             <h5 class="infotittel">Faktura</h5>
+             <dl>
+              <dt>Org.nr.</dt>
+              <dd class="js-orgNumberOutput"></dd>
+
+              <dt>Fakturadato</dt>
+              <dd class="js-invoiceDateOutput"></dd>
+
+              <dt>Forfallsdato</dt>
+              <dd class="js-deadlineOutput"></dd>
+
+              <dt>Kontonr.</dt>
+              <dd class="js-accountNumberOutput"></dd>
+            </p>
+          </div>
         </div>
 
         <div class="gultfelt">
@@ -51,7 +56,7 @@
                         </div>
                         <div class="feltboks">
                           <input id="accountNumber" placeholder="Kontonr." class="printhidden" />
-                          <span class="accountNumberOutput printonly"></span>
+                          <span class="js-accountNumberOutput printonly"></span>
                         </div>
                     </div>
                     <div class="belop">
@@ -60,7 +65,7 @@
                         </div>
                         <div class="feltboks hvit">
                             <input id="amount" class="printhidden" />
-                            <span class="amountOutput printonly"></span>
+                            <span class="js-amountOutput printonly"></span>
                         </div>
                     </div>
                     <div class="betalerkonto">
@@ -94,15 +99,15 @@
                             Betalings- frist
                         </div>
                         <div class="betalingsfristboks">
-                            <input id="deadline" class="printhidden" type="date"/>
-                            <span class="deadlineOutput printonly"></span>
+                            <input id="deadline" class="printhidden" placeholder="dd.mm.åååå" type="date"/>
+                            <span class="js-deadlineOutput printonly"></span>
                         </div>
                     </div>
                     <div class="infosignatur">
                         <div class="betalingsinfo">
                             <div class="betalingsinfoboks">
                                 <textarea cols="28" rows="3" id="paymentInfo" class="printhidden"></textarea>
-                                <span class="paymentInfoOutput printonly"></span>
+                                <span class="js-paymentInfoOutput printonly"></span>
                             </div>
                         </div>
                         <div class="signatur">
@@ -121,7 +126,7 @@
                         </div>
                         <div class="avtilboks">
                             <textarea cols="28" rows="4" id="paidBy" class="printhidden"></textarea>
-                            <span class="paidByOutput printonly"></span>
+                            <span class="js-paidByOutput printonly"></span>
                         </div>
                     </div>
                     <div class="til">
@@ -130,7 +135,7 @@
                         </div>
                         <div class="avtilboks">
                             <textarea cols="28" rows="4" id="paidTo" class="printhidden"></textarea>
-                            <span class="paidToOutput printonly"></span>
+                            <span class="js-paidToOutput printonly"></span>
                         </div>
                     </div>                    
                 </div>
@@ -182,7 +187,7 @@
                             Kroner
                         </div>
                         <div class="feltboks">
-                            <span class="amountOutput"></span>
+                            <span class="js-amountOutput"></span>
                         </div>
                     </div>
                     <div class="ore">
@@ -198,7 +203,7 @@
                             Til konto
                         </div>
                         <div class="feltboks">
-                          <span class="accountNumberOutput"></span>
+                          <span class="js-accountNumberOutput"></span>
                         </div>
                     </div>
                     <div class="blankettnr">
@@ -216,14 +221,11 @@
           <h3>Hint</h3>
           <p>
             Fyll ut ønskede felter markert i rødt, og trykk <strong>CTRL+P</strong> eller <a href="javascript:window.print()">klikk her</a>.<br>
-            I utskriftsdialogen bør du sette <em>Margins</em> til <em>Minimum</em>.<br>
-            Du kan i denne dialogen også velge å skrive ut som PDF.
+            I utskriftsdialogen bør du sette marger til <em>minimum</em> eller tilsvarende.<br>
+            Du kan i denne dialogen også velge å lagre som PDF.
           </p>
           <p>
             <strong>NB!</strong> Inntastet informasjon blir ikke lagret.
-          </p>
-          <p>
-            Denne siden er kun testet og vedlikeholdt for <a target="_blank" href="http://www.gogle.com/chrome">Google Chrome</a>.<br>
           </p>
         </div>
     </body>
