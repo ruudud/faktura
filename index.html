@@ -9,36 +9,36 @@
     </head>
     
     <body>
-        <h1 class="printhidden">Krisslee fakturagenerator</h1>
-        <div class="innhold">
+        <h1 class="printhidden">Fakturagenerator</h1>
+        <div class="hvittfelt">
           <div class="firmainfo">
-            <h3>Krisslee</h3>
-            <p>
-              Neseveien 9<br>
-              4514 MANDAL
-            </p>
-            <p>
-              www.krisslee.no
-            </p>
+            <p class="paidToOutput"></p>
+            <p class="webpageOutput"></p>
           </div>
           <div class="fakturainfo">
              <h5 class="infotittel">Faktura</h5>
              <dl>
               <dt>Org.nr.</dt>
-              <dd>913010779</dd>
+              <dd class="orgNumberOutput"></dd>
 
               <dt>Fakturadato</dt>
-              <dd class="invoiceDate"></dd>
+              <dd class="invoiceDateOutput"></dd>
 
               <dt>Forfallsdato</dt>
               <dd class="deadlineOutput"></dd>
 
               <dt>Kontonr.</dt>
-              <dd class="accountnumberOutput"></dd>
+              <dd class="accountNumberOutput"></dd>
             </p>
           </div>
-        
         </div>
+
+        <div class="innhold printhidden">
+          <input id="orgNumber" class="printhidden" placeholder="Org.nr." />
+          <input id="webpage" class="printhidden" placeholder="Nettsted" />
+          <small>(Valgfrie)</small>
+        </div>
+
         <div class="gultfelt">
             <div class="kvitteringtopp">
                 <div class="kvitteringtoptekst">
@@ -50,8 +50,8 @@
                           Innbetalt til konto
                         </div>
                         <div class="feltboks">
-                          <input id="accountnumber" value="1503.42.91680" class="printhidden" />
-                          <span class="accountnumberOutput printonly"></span>
+                          <input id="accountNumber" placeholder="Kontonr." class="printhidden" />
+                          <span class="accountNumberOutput printonly"></span>
                         </div>
                     </div>
                     <div class="belop">
@@ -129,9 +129,8 @@
                             Betalt til
                         </div>
                         <div class="avtilboks">
-                            Krisslee<br/>
-                            Neseveien 9<br/><br/>
-                            4514 MANDAL
+                            <textarea cols="28" rows="4" id="paidTo" class="printhidden"></textarea>
+                            <span class="paidToOutput printonly"></span>
                         </div>
                     </div>                    
                 </div>
@@ -199,7 +198,7 @@
                             Til konto
                         </div>
                         <div class="feltboks">
-                          <span class="accountnumberOutput"></span>
+                          <span class="accountNumberOutput"></span>
                         </div>
                     </div>
                     <div class="blankettnr">
@@ -239,6 +238,6 @@
   ga('send', 'pageview');
 
 </script>
-<script src="input.js" async></script>
+<script src="faktura.js" async></script>
 </html>
 
